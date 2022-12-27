@@ -1,0 +1,40 @@
+.footer {
+    .container-footer {
+        background: none;
+    }
+
+    padding: 70px 0;
+    box-shadow: rgba(149, 157, 165, 20%) 0px 8px 24px;
+    font-size: 1.1rem;
+    background-image: linear-gradient(rgba(84, 36, 36, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://cdn.pixabay.com/photo/2015/11/05/08/29/banner-1023854__340.jpg);
+    color: #fff;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    font-family: "Montserrat",
+    sans-serif;
+    height: 100%;
+
+    &__logo {
+        height: 70px;
+    }
+
+    &__about {
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        font-weight: 600;
+    }
+
+    &__content {
+        p {
+            margin-bottom: 1.25rem;
+        }
+    }
+}

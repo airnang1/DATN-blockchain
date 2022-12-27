@@ -1,0 +1,22 @@
+.section {
+    margin-bottom: 80px;
+
+    & > * ~ * {
+        margin-top: 70px;
+    }
+
+    &__title{
+        font-size: 30px;
+        color: #f49910;
+        text-transform: capitalize;
+        text-align: center;
+        font-family: 'M PLUS Rounded 1c', sans-serif;
+        
+        & i {
+            margin-right: 10px;
+            font-size: 40px;
+            color: #fddb45;
+        }
+    }
+    
+}

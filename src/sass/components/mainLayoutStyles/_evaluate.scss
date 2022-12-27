@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+.evaluate {
+    bottom: 47px;
+    position: fixed;
+    right: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & i.fad.fa-sticky-note {
+        font-size: 46px;
+        color: #ff0047;
+        cursor: pointer;
+    }
+    & i.fad.fa-heart {
+        font-size: 23px;
+        color: #ffffff;
+        position: absolute;
+        top: 25%;
+        right: 21%;
+        cursor: pointer;
+    }
+    i.fad.fa-times {
+        font-size: 25px;
+        color: #ffffff;
+        position: absolute;
+        top: 25%;
+        right: 27%;
+        text-shadow: 1px 1px 7px #eeeeee;
+        cursor: pointer;
+    }
+    &__table {
+        width: 300px;
+        height: 200px;
+        background: #fff;
+        position: absolute;
+        bottom: 150%;
+        right: -5%;
+        transform: translateY(30px);
+        opacity: 0;
+        box-shadow: 4px 6px 16px 1px #d6d6d6;
+        visibility: hidden;
+        transition: 0.35s ease-in-out;
+        &.active {
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+        }
+        &.form {
+            width: 300px;
+            height: 200px;
+            background: #fff;
+            position: absolute;
+            bottom: 150%;
+            right: -5%;
+            transform: translateY(30px);
+            box-shadow: 4px 6px 16px 1px #d6d6d6;
+            transition: 0.35s ease-in-out;
+            .evaluate__table__title {
+                display: none;
+            }
+            .evaluate__table__content {
+                margin-top: 24px;
+            }
+            .evaluate__table__fromInput {
+                position: relative;
+                textarea.ant-input {
+                    width: 261px;
+                    height: 77px;
+                    max-height: 142px;
+                    overflow-y: hidden;
+                    resize: none;
+                    min-height: 54px;
+                    margin-bottom: 26px;
+                }
+                i.fad.fa-paper-plane {
+                    position: absolute;
+                    bottom: 32%;
+                    right: 3%;
+                    cursor: pointer;
+                    color: #fa0066;
+                    z-index: 1000;
+                }
+            }
+        }
+    }
+
+    i.fal.fa-times {
+        padding: 3px 7px;
+        background: #ff028e;
+        position: absolute;
+        border-radius: 50px;
+        right: -9px;
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+        transform: translateY(-10px);
+    }
+    .evaluate__table__title {
+        font-family: 'Ephesis', cursive;
+        padding: 10px;
+        text-align: center;
+        span {
+            font-size: 24px;
+            text-align: center;
+            padding: 10px;
+        }
+    }
+    .evaluate__table__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 15px;
+        padding: 10px;
+        i {
+            font-size: 30px;
+            color: #ff90af;
+            cursor: pointer;
+            &:hover {
+                color: #ee0043;
+            }
+        }
+    }
+    .evaluate__table__content-item {
+        display: grid;
+        position: relative;
+        transform: translateY(60px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 1s ease-in-out;
+
+        &:first-child {
+            transition-delay: -0.22s;
+        }
+        &:nth-child(2) {
+            transition-delay: -0.34s;
+        }
+        &:nth-child(3) {
+            transition-delay: -0.46s;
+        }
+        &:nth-child(4) {
+            transition-delay: -0.58s;
+        }
+        &:last-child {
+            transition-delay: -0.7s;
+        }
+        &.active {
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+            width: 58px;
+            text-align: center;
+        }
+        span.evaluate__table__content-item-des {
+            position: absolute;
+            font-size: 15px;
+            color: #909090;
+            width: 55px;
+            text-align: center;
+            top: 0%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.25s ease-in-out;
+            &.active {
+                top: -40%;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    span.evaluate__table__content__score {
+        text-align: center;
+        color: #c42d2d;
+        font-size: 15px;
+        margin-top: 9px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: 0.25s ease-in-out;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(-5px);
+        }
+    }
+}

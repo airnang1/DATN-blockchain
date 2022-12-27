@@ -1,0 +1,143 @@
+.ant-avatar-lg {
+    width: 50px;
+    height: 50px;
+}
+.row {
+    width: 100%;
+}
+.col {
+    &-lg-12 {
+    }
+}
+.order {
+    &__total-money {
+        display: flex;
+        width: 100%;
+    }
+    &__user-profile {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'M PLUS Rounded 1c';
+        text-align: center;
+    }
+    &__product-title {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'M PLUS Rounded 1c';
+        text-align: center;
+    }
+    &__user {
+        margin-top: 15px;
+        font-size: 15px;
+        font-family: 'M PLUS Rounded 1c';
+    }
+    &__user-title {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__user-name {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'M PLUS Rounded 1c';
+        margin-left: 10px;
+        color: #686868;
+    }
+    &__user-phone-title {
+        font-weight: 600;
+    }
+    &__user-address-title {
+        font-weight: 600;
+    }
+    &__user-date-time-title {
+        font-weight: 600;
+    }
+    &__user-address {
+        margin: 5px 0;
+    }
+    &__user-date-time {
+        margin: 5px 0;
+    }
+    &__user-phone {
+        margin-top: 10px;
+    }
+    &__product-item-content-capacity {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    &__user-message-title {
+        font-weight: 600;
+    }
+    span {
+        margin: 10px;
+    }
+    &__product {
+        font-size: 20px;
+        font-weight: 600;
+        font-family: 'M PLUS Rounded 1c';
+        height: auto;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+    &__product-item-content {
+        padding: 10px;
+    }
+    &__product-item-content {
+        font-size: 15px;
+        &-name {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+        }
+    }
+    &__total-money {
+        font-size: 24px;
+        font-family: 'M PLUS Rounded 1c';
+        color: #626262;
+    }
+    &__total-money-title {
+        margin-left: 10px;
+    }
+    &__total-money {
+        position: absolute;
+        bottom: 30px;
+    }
+    &__user-profile {
+        display: grid;
+    }
+    &__total-money-text {
+        color: red;
+        font-weight: 600;
+        margin-left: 20px;
+    }
+    &__product-item-content-amount {
+        width: 30px;
+        font-size: 12px;
+    }
+    &__product-item-content-price {
+        color: #dc0808;
+        font-size: 16px;
+        margin-left: 18px;
+    }
+
+    &__product-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .ant-drawer-body {
+    padding: 20px;
+}
+}
+
+.ant-image-mask-info {
+    font-size: 10px;
+}
+
+.drawer .ant-drawer-body {
+    padding: 20px;
+}

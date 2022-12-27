@@ -1,0 +1,51 @@
+.purchase-order {
+
+    &__handle {
+        &-val {
+            box-shadow: 0px 0px 3px 1px #d7d7d7;
+        }
+    }
+
+    &__processing {}
+
+    &__selection {
+        height: 250px;
+
+    }
+
+    & .img-w-10 {
+        width: 25%;
+    }
+
+    &__selection-wraper {
+        font-size: 17px;
+    }
+
+    &__purchase {
+        font-size: 17px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .font-weight-bold {
+        font-weight: 700 !important;
+        font-size: 17px;
+    }
+
+    .font-weight-light {
+        font-weight: 184 !important;
+        font-size: 13px;
+    }
+
+    li.list-group-item {
+        border: none;
+        padding: 0.45rem 0;
+    }
+
+    ul.list-group.list-group-flush {
+        margin-left: 23px;
+    }
+
+}

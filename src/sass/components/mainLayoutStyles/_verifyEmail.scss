@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&family=Roboto:wght@500&display=swap");
+.active_page {
+	background: linear-gradient(to right, white 50%, #383838 50%);
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 1.5;
+	color: white;
+	cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-edge.png"), auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	div {
+		display: flex;
+		align-items: center;
+		height: 100vh;
+		max-width: 1000px;
+		width: calc(100% - 4rem);
+		margin: 0 auto;
+		>* {
+			display: flex;
+			flex-flow: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			max-width: 500px;
+			width: 100%;
+			padding: 2.5rem;
+		}
+	}
+	aside {
+		background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/right-edges.png");
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-size: 25px 100%;
+        width: 50%;
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+	}
+	.active_page__title {
+		text-align: center;
+		h1 {
+			font-family: "Fontdiner Swanky", cursive;
+			font-size: 4rem;
+			color: #c5dc50;
+			margin-bottom: 1rem;
+		}
+		p {
+			font-family: "Fontdiner Swanky", cursive;
+			em {
+				font-style: italic;
+				color: #c5dc50;
+			}
+		}
+		button {
+			font-family: "Fontdiner Swanky", cursive;
+			font-size: 1rem;
+			color: #383838;
+			border: none;
+			background-color: #f36a6f;
+			padding: 1rem 2.5rem;
+			transform: skew(-5deg);
+			transition: all 0.1s ease;
+			cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-eye.png"), auto;
+			&:hover {
+				background-color: #c5dc50;
+				transform: scale(1.15);
+			}
+		}
+	}
+}
+@media (max-width: 700px) {
+	.active_page {
+		body {
+			background: #383838;
+			font-size: 16px;
+		}
+		div {
+			flex-flow: column;
+			>* {
+				max-width: 700px;
+				height: 100%;
+			}
+		}
+		aside {
+			background-image: none;
+			background-color: white;
+			img {
+				max-width: 300px;
+			}
+		}
+	}
+}

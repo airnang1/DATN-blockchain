@@ -1,0 +1,25 @@
+.skeleton-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    opacity: 0.5;
+    & span.ant-skeleton-button {
+        width: 210px !important;
+        height: 350px !important;
+    }
+    & .ant-skeleton-image {
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        height: 187px !important;
+        width: 169px !important;
+    }
+    & span.ant-skeleton-input {
+        width: 170px !important;
+        height: 70px !important;
+        position: absolute;
+        bottom: 10%;
+        left: 15%;
+    }
+}

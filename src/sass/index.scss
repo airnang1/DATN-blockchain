@@ -1,0 +1,33 @@
+@import './_variables.scss';
+@import './_mixins.scss';
+@import './_base';
+
+@import './components/mainLayoutStyles/header';
+@import './components/mainLayoutStyles/footer';
+@import './components/mainLayoutStyles/heroSlides';
+@import './components/mainLayoutStyles/button';
+@import './components/mainLayoutStyles/police';
+@import './components/mainLayoutStyles/section';
+@import './components/mainLayoutStyles/product-cart';
+@import './components/mainLayoutStyles/categorySelect';
+@import './components/mainLayoutStyles/banner';
+@import './components/mainLayoutStyles/not-found';
+@import './components/PurchaseOrder/purchase-order';
+@import './components/mainLayoutStyles/evaluate';
+@import './components/mainLayoutStyles/drawer';
+@import './components/DashBoard/main';
+@import './components/mainLayoutStyles/chatBox';
+@import './components/Custom/empty-component';
+@import './components/mainLayoutStyles/verifyEmail';
+@import './components/mainLayoutStyles/comments-product';
+@import './components/mainLayoutStyles/skeleton';
+@import './components/mainLayoutStyles/order-sucess';
+@import './components/mainLayoutStyles/success-modal';
+@import './components/DashBoard/customer';
+@import './components/DashBoard/order';
+@import './components/DashBoard/store';
+@import './components/LoginStyles/login-form';
+@import './components/Custom/buttons_added';
+
+
+@import './pages/ProductDetail/index.scss'

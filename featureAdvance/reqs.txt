@@ -1,0 +1,5 @@
+dopamine-rl==3.0.1
+sanic-plugins-framework==0.8.2
+protobuf==3.20.*
+sanic==21.9.3
+rasa==1.6.0

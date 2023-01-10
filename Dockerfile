@@ -4,18 +4,21 @@ WORKDIR /app
 
 RUN chown node:node /app
 
-COPY --chown=node:node package*.json ./
+COPY --chown=node:node package*.json ./ 
 
 USER node
 
+RUN rm -rf package-lock.json
+RUN rm -rf node_modules 
 RUN npm install
 
+COPY . .
 COPY --chown=node:node . .
 
-EXPOSE 3000
+EXPOSE 8800
 
 ENV MONGODB_USERNAME anhlongwin
 ENV MONGODB_PASSWORD anhlongwin1901
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
 

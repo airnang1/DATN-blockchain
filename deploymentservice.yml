@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webbanhang-deployment
+  labels:
+    app: webbanhang
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webbanhang
+  template:
+    metadata:
+      labels:
+        app: webbanhang
+    spec:
+      containers:
+      - name: nodewebbanhang
+        image: airnang/webbanhang:latest
+        ports:
+        - containerPort: 1901
+      nodeSelector:
+        nodeType: client
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: webbanhang-service
+spec:
+  selector:
+    app: webbanhang
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 5001
+    targetPort: 1901
+    nodePort: 31112

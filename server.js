@@ -107,7 +107,7 @@ if (process.env.NODE_ENV === "production") {
   });
 } else {
   app.get("/", (req, res) => {
-    res.send("api in running ...");
+    res.send("api in running ...12321312");
   });
 }
 

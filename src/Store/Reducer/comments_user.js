@@ -9,7 +9,7 @@ export const getCommentsUserApi = createAsyncThunk(
     'commentsUser/commentsUserFetch',
     async (productId) => {
         const response = await axios.get(
-            `http://localhost:3000/comments_user?id_product=${productId}`,
+            `http://13.251.59.19:3000/comments_user?id_product=${productId}`,
         );
         return response.data;
     },
@@ -31,7 +31,7 @@ export const getCommentsToStore = createAsyncThunk(
 export const getCommentsAllApi = createAsyncThunk(
     'commentsUsers/commentsUserAllFetch',
     async () => {
-        const response = await axios.get(`http://localhost:3000/comments_user`);
+        const response = await axios.get(`http://13.251.59.19:3000/comments_user`);
         return response.data;
     },
 );
@@ -125,7 +125,7 @@ export const updateCmtItem = createAsyncThunk(
             ...obj,
         };
         await axios.put(
-            `http://localhost:3000/comments_user/${obj.id}`,
+            `http://13.251.59.19:3000/comments_user/${obj.id}`,
             newCommentsUser,
         );
         return newCommentsUser;

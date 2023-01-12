@@ -5,7 +5,7 @@ import axios from 'axios';
 export const getPayProduct = createAsyncThunk(
     'payProducts/payProductFetch',
     async () => {
-        const response = await axios.get(`http://localhost:3000/orders_pay`);
+        const response = await axios.get(`http://13.251.59.19:3000/orders_pay`);
         return response.data;
     },
 );
@@ -17,7 +17,7 @@ export const insertPayProduct = createAsyncThunk(
             id: nanoid(),
             ...obj,
         };
-        await axios.post('http://localhost:3000/orders_pay', newOrderPay);
+        await axios.post('http://13.251.59.19:3000/orders_pay', newOrderPay);
         return newOrderPay;
     },
 );
@@ -29,7 +29,7 @@ export const updatePayProduct = createAsyncThunk(
             ...obj,
         };
         await axios.put(
-            `http://localhost:3000/orders_pay/${obj.id}`,
+            `http://13.251.59.19:3000/orders_pay/${obj.id}`,
             newPayProduct,
         );
         return newPayProduct;
@@ -41,7 +41,7 @@ export const deletePayProductAllApi = createAsyncThunk(
     async (obj) => {
         let arrProduct = [];
         setTimeout(async () => {
-            await axios.delete(`http://localhost:3000/orders_pay/${obj.id}`);
+            await axios.delete(`http://13.251.59.19:3000/orders_pay/${obj.id}`);
         }, 100);
         arrProduct.push(obj);
         return arrProduct;

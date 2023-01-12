@@ -5,7 +5,7 @@ export const getCategoryProductsAllApi = createAsyncThunk(
     'categoryProducts/categoryProductsAllFetch',
     async () => {
         const response = await axios.get(
-            `http://localhost:3000/category_products`,
+            `http://13.251.59.19:3000/category_products`,
         );
         return response.data;
     },
@@ -19,7 +19,7 @@ export const insertCategory = createAsyncThunk(
             ...obj,
         };
         await axios.post(
-            'http://localhost:3000/category_products',
+            'http://13.251.59.19:3000/category_products',
             newCategoryProducts,
         );
         return newCategoryProducts;
@@ -29,7 +29,7 @@ export const insertCategory = createAsyncThunk(
 export const deleteCategoryProductAllApi = createAsyncThunk(
     'categoryProduct/categoryProductAllRemove',
     async (obj) => {
-        await axios.delete(`http://localhost:3000/category_products/${obj.id}`);
+        await axios.delete(`http://13.251.59.19:3000/category_products/${obj.id}`);
         return obj;
     },
 );
@@ -41,7 +41,7 @@ export const deleteCategoryProductAllApi = createAsyncThunk(
 //             ...obj,
 //         };
 //         await axios.put(
-//             `http://localhost:3000/category_products/${obj.id}`,
+//             `http://13.251.59.19:3000/category_products/${obj.id}`,
 //             newCategoryProduct,
 //         );
 //         return newCategoryProduct;

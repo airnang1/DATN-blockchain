@@ -4,7 +4,7 @@ import axios from 'axios';
 export const getLaptopsApi = createAsyncThunk(
     'laptops/laptopsFetch',
     async () => {
-        const response = await axios.get(`http://localhost:3000/laptop_api`);
+        const response = await axios.get(`http://13.251.59.19:3000/laptop_api`);
         return response.data;
     },
 );
@@ -16,7 +16,7 @@ export const handleInsertProductToLaptop = createAsyncThunk(
             id: nanoid(),
             ...obj,
         };
-        await axios.post('http://localhost:3000/laptop_api', newProduct);
+        await axios.post('http://13.251.59.19:3000/laptop_api', newProduct);
         return newProduct;
     },
 );
@@ -24,7 +24,7 @@ export const handleInsertProductToLaptop = createAsyncThunk(
 export const handleRemoveLaptopItemApi = createAsyncThunk(
     'laptops/laptopsRemove',
     async (obj) => {
-        await axios.delete(`http://localhost:3000/laptop_api/${obj.id}`);
+        await axios.delete(`http://13.251.59.19:3000/laptop_api/${obj.id}`);
         return obj;
     },
 );
@@ -36,7 +36,7 @@ export const handleUpdateLaptopItemApi = createAsyncThunk(
             ...obj,
         };
         await axios.put(
-            `http://localhost:3000/laptop_api/${obj.id}`,
+            `http://13.251.59.19:3000/laptop_api/${obj.id}`,
             newLaptops,
         );
         return newLaptops;

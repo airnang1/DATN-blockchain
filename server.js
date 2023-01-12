@@ -34,9 +34,11 @@ paypal.configure({
     "EBmpfnknSWl2MmTFoUPXJoUOoibPB7xM79-EKrBaga-SmTfloKmsoUJM36OW-zBARbipVNFS6rAPB_90",
 });
 
+mongoose.set('strictQuery', false);
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
   .then(() => console.log("DB Connected"))
   .catch((err) => {

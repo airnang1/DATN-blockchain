@@ -20,7 +20,7 @@ spec:
         ports:
         - containerPort: 1901
       nodeSelector:
-        nodeType: client
+        nodeType: server
 
 ---
 

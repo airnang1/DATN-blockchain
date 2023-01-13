@@ -34,9 +34,11 @@ paypal.configure({
     "EBmpfnknSWl2MmTFoUPXJoUOoibPB7xM79-EKrBaga-SmTfloKmsoUJM36OW-zBARbipVNFS6rAPB_90",
 });
 
+mongoose.set('strictQuery', false);
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
   })
   .then(() => console.log("DB Connected"))
   .catch((err) => {
@@ -60,7 +62,7 @@ app.use(function (req, res, next) {
   res.header(
     "Access-Control-Allow-Origin",
     process.env.NODE_ENV !== "production"
-      ? ["http://localhost:1901"]
+      ? ["http://13.251.59.19:31112"]
       : ["https://buihoanglong19012001.netlify.app/"]
   );
 
